@@ -3,3 +3,38 @@
 [build]
   publish = "."
   command = ""
+
+# Serve /about from about.html, etc.
+[build.processing.html]
+  pretty_urls = true
+
+# 301 redirects for old indexed .html URLs (force overrides the physical files).
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/products.html"
+  to = "/products"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery.html"
+  to = "/gallery"
+  status = 301
+  force = true
